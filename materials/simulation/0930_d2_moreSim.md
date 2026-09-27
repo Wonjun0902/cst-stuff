@@ -1,10 +1,11 @@
 # CST Day 2: More Simulation
 **Goals:**
-1. Have made a **[USACO](https://usaco.org), [CF](https://codeforces.com), and [CSES](https://cses.fi) account**
-2. Remember what **simulation** is
-3. Be able to **reason through simulation problems logically**
-4. Be able to **implement solutions for simple simulation problems**
-5. Explore more **difficult simulation problems**
+1. Have VSCode working (download C++ Clang on device and get extensions)
+2. Have made a **[USACO](https://usaco.org), [CF](https://codeforces.com), and [CSES](https://cses.fi) account**
+3. Remember what **simulation** is
+4. Be able to **reason through simulation problems logically**
+5. Be able to **implement solutions for simple simulation problems**
+6. Explore more **difficult simulation problems**
 
 # Review: Simulation + How to C++
 *Refer to [Day 1 Notes](0923_d1_sim_howToCPP.md) for the comprehensive notes; below are select notes.*
@@ -26,13 +27,27 @@ Remember that certain structures or functions require you to `#include` more hea
 #include <iostream>     // cin & cout
 #include <vector>       // vectors (resizable arrays)
 #include <string>       // strings
+#include <utility>      // utils like pair
 #include <cmath>        // math functions like sqrt() or pow()
 #include <algorithm>    // advanced functions
 ```
 
 Always refer to C++'s documentation if you need to figure out what a function does: [Devdoc's C++ Reference](https://devdocs.io/cpp/) or the much scarier [C++ Reference Wiki](https://cppreference.com)
 
-## Common Patterns
+## Data Types
+**Primitive data types:**
+- `int`: integer
+- `long long`: long integer
+- `double`: long decimal
+- `bool`: boolean
+
+**Non-primitive:**
+- `vector`: resizable array (from `<vector>` STL header)
+- `string`: string (from `<string>` STL header)
+- `pair`: 2-element tuple (from `<utility>` STL header)
+
+
+# Common Patterns
 1. Comprog problems always tell you the size of the data you will receive; this makes it easy for you to.
 2. Some problems will give you multiple 'queries' each test case. E.g., [Majority Opinion (USACO Bronze 2024)](https://usaco.org/index.php?page=viewproblem2&cpid=1371). Each query is one set of inputs.<br/>If this is the case (pun intended), focus on solving the main problem *(note that they usually do this to make sure your code runs fast enough, so be careful!)*.<br/> Then, just loop that code $Q$ times:
 ```cpp
@@ -51,7 +66,7 @@ int main() {
 }
 ```
 
-### Simulation-Specific Patterns
+## Simulation-Specific Patterns
 **Basic:**
 1. **Time-based**: These problems give you something that happens over time, and your job is usually to track the process and output some data.
     1. [Speeding Ticket](../../problems/B15_16_SpeedingTicket.md) (USACO Bronze 2015)
